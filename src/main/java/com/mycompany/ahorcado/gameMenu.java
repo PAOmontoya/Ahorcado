@@ -1,3 +1,8 @@
+package com.mycompany.ahorcado;
+
+//Pao
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -27,8 +32,11 @@ public class gameMenu extends javax.swing.JFrame {
 
         jButton1 = new javax.swing.JButton();
         letraFIELD = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setText("check");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -36,34 +44,52 @@ public class gameMenu extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 145, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(letraFIELD, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
-                .addContainerGap(120, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(227, Short.MAX_VALUE)
-                .addComponent(letraFIELD, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1)
-                .addGap(32, 32, 32))
-        );
+        letraFIELD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                letraFIELDActionPerformed(evt);
+            }
+        });
+        getContentPane().add(letraFIELD, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 95, 63, 38));
+
+        jLabel1.setText("   ");
+        jLabel1.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jLabel1AncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 190, 45));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\telip\\Downloads\\hangman.jpg")); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 200));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String letraGUESS=letraFIELD.getText();
+        
+        if(checkOnlyOne(letraGUESS)){
+            //check if la letra esta en la word
+        }else{
+            JOptionPane.showMessageDialog(null, "Solo tiene que ingresar 1 letra");
+        }
+
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void letraFIELDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_letraFIELDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_letraFIELDActionPerformed
+
+    private void jLabel1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jLabel1AncestorAdded
+        jLabel1.setText(Display(4));
+    }//GEN-LAST:event_jLabel1AncestorAdded
 
     /**
      * @param args the command line arguments
@@ -99,9 +125,28 @@ public class gameMenu extends javax.swing.JFrame {
             }
         });
     }
+    
+    public boolean checkOnlyOne(String letra){
+        if(letra.length()<2){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    
+    public String Display (int wordLength){
+        //mas logica aqui
+        String display="";
+        for(int i=0;i<wordLength;i++){
+            display+=" _";
+        }
+        return display;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JTextField letraFIELD;
     // End of variables declaration//GEN-END:variables
 }
