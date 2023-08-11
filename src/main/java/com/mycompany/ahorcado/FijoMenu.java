@@ -19,7 +19,8 @@ public class FijoMenu extends javax.swing.JFrame {
      */
     public FijoMenu() {
         initComponents();  
-        
+        wordList.add("h");
+        comboB.setModel(new DefaultComboBoxModel<>(wordList.toArray(new String[0])));
     }
 
     /**
@@ -98,7 +99,7 @@ public class FijoMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void comboBComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_comboBComponentAdded
-    comboB.setModel(new DefaultComboBoxModel<String>(wordList.toArray(new String[0])));
+
     }//GEN-LAST:event_comboBComponentAdded
 
     /**
