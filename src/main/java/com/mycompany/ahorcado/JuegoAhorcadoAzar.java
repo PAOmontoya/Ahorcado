@@ -13,7 +13,7 @@ public class JuegoAhorcadoAzar extends JuegoAhorcadoBase{
       
       
     public JuegoAhorcadoAzar(ArrayList<String> palabrasPosibles) {
-        this.ListaPalabras = palabrasPosibles;
+        jugar();
         
         
     }
@@ -25,7 +25,7 @@ public class JuegoAhorcadoAzar extends JuegoAhorcadoBase{
           for (int i = 0; i < palabraSecreta.length(); i++) {
               if(verificarLetra(letra)){
               nuevaPalabraActual.setCharAt(i, letra);
-              Jlabel.setText(nuevaPalabraActual);
+              //Jlabel.setText(nuevaPalabraActual);
           } 
         }
           if(!verificarLetra(letra)){
