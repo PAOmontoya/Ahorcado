@@ -64,8 +64,6 @@ public class gameMenu extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 190, 45));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\telip\\Downloads\\hangman.jpg")); // NOI18N
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 200));
 
         pack();
