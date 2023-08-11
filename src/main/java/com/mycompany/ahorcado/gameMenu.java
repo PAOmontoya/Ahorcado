@@ -13,10 +13,8 @@ import javax.swing.JOptionPane;
  * @author telip
  */
 public class gameMenu extends javax.swing.JFrame {
-
-    /**
-     * Creates new form gameMenu
-     */
+    
+    String letraGUESS;
     public gameMenu() {
         initComponents();
     }
@@ -71,7 +69,7 @@ public class gameMenu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String letraGUESS=letraFIELD.getText();
+        letraGUESS=letraFIELD.getText();
         
         if(checkOnlyOne(letraGUESS)){
             //check if la letra esta en la word
@@ -82,7 +80,7 @@ public class gameMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void letraFIELDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_letraFIELDActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_letraFIELDActionPerformed
 
     private void jLabel1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jLabel1AncestorAdded
