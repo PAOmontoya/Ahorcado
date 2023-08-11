@@ -11,7 +11,7 @@ package com.mycompany.ahorcado;
 public abstract class JuegoAhorcadoBase implements JuegoAhorcado {
     protected String palabraSecreta;
     protected String palabraActual;
-    protected int intentos;
+    protected int intentos = 6;
     
     abstract void actualizarPalabraActual(char letra);
     abstract boolean verificarLetra (char letra);
