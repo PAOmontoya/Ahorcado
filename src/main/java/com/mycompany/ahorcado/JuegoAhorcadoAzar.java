@@ -57,7 +57,7 @@ public class JuegoAhorcadoAzar extends JuegoAhorcadoBase{
     public void jugar() {
         inicializarPalabraSecreta();
         inicializarPalabraSecreta();
-
+/*
         while (intentos > 0 && !hasGanado()) {
             char letraIngresada = Jlabel.getText();
             if (verificarLetra(letraIngresada)) {
@@ -66,6 +66,7 @@ public class JuegoAhorcadoAzar extends JuegoAhorcadoBase{
                 intentos--;
             }
         }
+*/
         if(hasGanado()){
             JOptionPane.showMessageDialog(null, "¡HAS GANADO, FELICIDADES!");
         }else{
