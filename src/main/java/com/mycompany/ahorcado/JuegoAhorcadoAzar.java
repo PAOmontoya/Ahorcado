@@ -60,7 +60,7 @@ public class JuegoAhorcadoAzar extends JuegoAhorcadoBase{
         inicializarPalabraSecreta();
 
         while (intentos > 0 && !hasGanado()) {
-            char letraIngresada = game.letraFIELD.getText().charAt(0);
+            char letraIngresada = game.letraGUESS.charAt(0);
             if (verificarLetra(letraIngresada)) {
                 actualizarPalabraActual(letraIngresada);
             } else {
