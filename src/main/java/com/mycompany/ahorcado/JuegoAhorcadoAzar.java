@@ -12,7 +12,7 @@ public class JuegoAhorcadoAzar extends JuegoAhorcadoBase{
       
       
       
-    public JuegoAhorcadoAzar(ArrayList<String> palabrasPosibles) {
+    public JuegoAhorcadoAzar() {
         jugar();
         
         
@@ -55,18 +55,19 @@ public class JuegoAhorcadoAzar extends JuegoAhorcadoBase{
 
     @Override
     public void jugar() {
+        gameMenu game=new gameMenu();
         inicializarPalabraSecreta();
         inicializarPalabraSecreta();
-/*
+
         while (intentos > 0 && !hasGanado()) {
-            char letraIngresada = Jlabel.getText();
+            char letraIngresada = game.letraFIELD.getText().charAt(0);
             if (verificarLetra(letraIngresada)) {
                 actualizarPalabraActual(letraIngresada);
             } else {
                 intentos--;
             }
         }
-*/
+
         if(hasGanado()){
             JOptionPane.showMessageDialog(null, "¡HAS GANADO, FELICIDADES!");
         }else{
