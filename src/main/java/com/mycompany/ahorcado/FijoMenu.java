@@ -10,7 +10,7 @@ import javax.swing.JComboBox;
  * @author telip
  */
 public class FijoMenu extends javax.swing.JFrame {
-    //AdminPalabras lista =  
+    ArrayList<String> wordList=new ArrayList<String>(); 
     
  
     
@@ -19,7 +19,7 @@ public class FijoMenu extends javax.swing.JFrame {
      */
     public FijoMenu() {
         initComponents();  
-        wordList.add("");
+        wordList.add();
         comboB.setModel(new DefaultComboBoxModel<>(wordList.toArray(new String[0])));
     }
 
