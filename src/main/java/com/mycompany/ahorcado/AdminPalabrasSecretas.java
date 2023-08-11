@@ -27,4 +27,10 @@ public class AdminPalabrasSecretas {
         int posicionRandom = random.nextInt(0, palabrasSecretas.size());
         return palabrasSecretas.get(posicionRandom);
     }
+
+    public ArrayList<String> getPalabrasSecretas() {
+        return palabrasSecretas;
+    }
+    
+    
 }
